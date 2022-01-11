@@ -56,7 +56,7 @@ class App extends React.Component {
        ...this.state,
        tasks: this.state.tasks.map(task => {
          if (task.id === selectedTask.id) {
-           return ({...task, completed: !task.completed})
+           return ({...this.state.tasks, completed: !task.completed})
          } else {
            return task;
          }
